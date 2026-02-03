@@ -1,326 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Waseem Almazrua - Data Scientist specializing in Machine Learning, AI systems, and Healthcare Analytics">
-    <title>Waseem Almazrua | Data Scientist & ML Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>Waseem Almazrua | Data Scientist & ML Engineer</title>
 
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #0ea5e9;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+<meta name="description"
+content="Waseem Almazrua – Data Scientist specializing in Machine Learning, Deep Learning, and Healthcare AI systems." />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-light);
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
+<style>
+:root{
+  --primary:#4f46e5;
+  --secondary:#6366f1;
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --gray:#64748b;
+  --white:#ffffff;
+  --gradient:linear-gradient(135deg,#6366f1,#8b5cf6);
+}
 
-        header {
-            background: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.7;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
+/* NAV */
+header{
+  background:var(--white);
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 12px rgba(0,0,0,.06)
+}
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 0
+}
+.logo{
+  font-size:1.6rem;font-weight:800;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav a{text-decoration:none;color:var(--dark);font-weight:600}
+nav a:hover{color:var(--primary)}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* HERO */
+.hero{
+  background:var(--gradient);
+  color:var(--white);
+  text-align:center;
+  padding:7rem 0
+}
+.hero h1{font-size:3.5rem;font-weight:800}
+.hero h2{font-size:1.7rem;margin-top:.5rem;opacity:.95}
+.hero p{
+  max-width:720px;margin:1.5rem auto 2.5rem;
+  font-size:1.15rem;opacity:.9
+}
+.hero-buttons{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap
+}
+.btn{
+  padding:.9rem 2.2rem;border-radius:10px;
+  text-decoration:none;font-weight:700;
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:.25s
+}
+.btn-primary{background:var(--white);color:var(--primary)}
+.btn-secondary{border:2px solid var(--white);color:var(--white)}
+.btn:hover{transform:translateY(-3px)}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
+/* SECTIONS */
+section{padding:5rem 0}
+.section-title{
+  text-align:center;font-size:2.4rem;font-weight:800;
+  margin-bottom:3rem
+}
+.section-title::after{
+  content:"";display:block;width:70px;height:4px;
+  background:var(--gradient);margin:1rem auto;border-radius:4px
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
+/* ABOUT */
+.card{
+  background:var(--white);
+  padding:3rem;border-radius:18px;
+  box-shadow:0 10px 35px rgba(0,0,0,.08)
+}
 
-        .hero {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 8rem 0 6rem;
-            text-align: center;
-        }
+/* SKILLS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem
+}
+.skill{
+  text-align:center;padding:2rem;border-radius:16px;
+  background:var(--white);
+  box-shadow:0 6px 20px rgba(0,0,0,.08)
+}
+.skill i{
+  font-size:3rem;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:1rem
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
+/* PROJECTS */
+.project{
+  background:var(--white);
+  padding:2rem;border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08)
+}
 
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
+/* CONTACT */
+.contact-item{
+  display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem
+}
+.contact-icon{
+  width:50px;height:50px;border-radius:12px;
+  background:var(--gradient);color:#fff;
+  display:flex;align-items:center;justify-content:center
+}
 
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
+/* FOOTER */
+footer{
+  background:#020617;color:#cbd5f5;text-align:center;
+  padding:2rem 0
+}
 
-        .hero-buttons {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.9rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-
-        .btn-secondary {
-            border: 2px solid var(--white);
-            color: var(--white);
-        }
-
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: "";
-            width: 60px;
-            height: 4px;
-            background: var(--gradient);
-            display: block;
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .card p {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-grid, .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card, .project-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 14px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .skill-card i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .project-card p {
-            color: var(--text-light);
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        footer {
-            background: var(--text-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero h2 {
-                font-size: 1.4rem;
-            }
-            .hero-buttons {
-                flex-direction: column;
-            }
-        }
-    </style>
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:2.6rem}
+.hero h2{font-size:1.4rem}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-            <div class="logo">WA</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="container">
+<nav>
+<div class="logo">WA</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#cv">CV</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1>Waseem Almazrua</h1>
-        <h2>Data Scientist | Machine Learning & AI Systems</h2>
-        <p>
-            Building end-to-end data science and machine learning systems — from data analysis and modeling
-            to deployment — with a strong focus on healthcare applications.
-        </p>
+<div class="container">
+<h1>Waseem Almazrua</h1>
+<h2>Data Scientist | ML & Medical AI Engineer</h2>
+<p>
+Building production-ready Machine Learning & Deep Learning systems,
+with strong focus on Healthcare Analytics and AI-driven decision support.
+</p>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get In Touch</a>
-            <a href="https://github.com/waseemalmazrua" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-github"></i> View GitHub
-            </a>
-        </div>
-    </div>
+<div class="hero-buttons">
+<a href="assets/cv/Waseem_Almazrua_CV_2026.pdf" target="_blank" class="btn btn-primary">
+<i class="fas fa-file-pdf"></i> View CV
+</a>
+<a href="assets/cv/Waseem_Almazrua_CV_2026.pdf" download class="btn btn-secondary">
+<i class="fas fa-download"></i> Download CV
+</a>
+</div>
+</div>
 </section>
 
 <section id="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="card">
-            <p>
-                I am a Data Scientist with a strong background in healthcare and clinical environments.
-                I transitioned professionally into data science, focusing on data analysis, statistics,
-                and machine learning to build data-driven solutions that support decision-making,
-                quality improvement, and operational efficiency.
-            </p>
-            <p>
-                I work across the full machine learning lifecycle, including data preprocessing,
-                feature engineering, model training, evaluation, and deployment.
-                I have hands-on experience building APIs with FastAPI, integrating models with databases,
-                and designing reproducible ML workflows suitable for production environments.
-            </p>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<div class="card">
+<p>
+I am a Data Scientist with a solid healthcare background, professionally
+transitioned into Machine Learning and AI system development.
+My work focuses on building end-to-end ML pipelines,
+from data analysis and modeling to deployment and monitoring.
+</p>
+<br/>
+<p>
+My interests include applied ML, Deep Learning, MLOps,
+and scalable AI solutions for healthcare and enterprise systems.
+</p>
+</div>
+</div>
 </section>
 
 <section id="skills">
-    <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fab fa-python"></i><h3>Python</h3><p>Data analysis, ML, automation</p></div>
-            <div class="skill-card"><i class="fas fa-database"></i><h3>SQL</h3><p>Querying & data modeling</p></div>
-            <div class="skill-card"><i class="fas fa-chart-line"></i><h3>Data Science</h3><p>EDA, statistics, visualization</p></div>
-            <div class="skill-card"><i class="fas fa-brain"></i><h3>Machine Learning</h3><p>Supervised & unsupervised models</p></div>
-            <div class="skill-card"><i class="fas fa-network-wired"></i><h3>Deep Learning</h3><p>CNNs, PyTorch, TensorFlow</p></div>
-            <div class="skill-card"><i class="fas fa-cogs"></i><h3>ML Systems</h3><p>FastAPI, Docker, MLflow, Git</p></div>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Core Expertise</h2>
+<div class="grid">
+
+<div class="skill"><i class="fab fa-python"></i><h3>Python</h3><p>ML, DL, automation, data pipelines</p></div>
+<div class="skill"><i class="fas fa-database"></i><h3>SQL</h3><p>Analytical & production databases</p></div>
+<div class="skill"><i class="fas fa-brain"></i><h3>Machine Learning</h3><p>Supervised, Unsupervised, NLP, CV</p></div>
+<div class="skill"><i class="fas fa-network-wired"></i><h3>ML Systems</h3><p>Pipelines, APIs, deployment, monitoring</p></div>
+<div class="skill"><i class="fas fa-robot"></i><h3>Deep Learning</h3><p>Neural networks & medical AI</p></div>
+<div class="skill"><i class="fas fa-heartbeat"></i><h3>Healthcare AI</h3><p>Clinical analytics & decision support</p></div>
+
+</div>
+</div>
 </section>
 
 <section id="projects">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Healthcare Readmission Prediction</h3>
-                <p>
-                    Built a machine learning system to predict hospital readmissions using clinical data.
-                    Covered preprocessing, modeling, evaluation, and deployment via FastAPI.
-                </p>
-                <a class="project-link" href="https://github.com/waseemalmazrua" target="_blank">View Project →</a>
-            </div>
+<div class="container">
+<h2 class="section-title">Projects</h2>
+<div class="grid">
 
-            <div class="project-card">
-                <h3>Professional Portfolio</h3>
-                <p>Collection of healthcare analytics and data science projects.</p>
-                <a class="project-link" href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/" target="_blank">
-                    View Portfolio →
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="project">
+<h3>GitHub Projects</h3>
+<p>ML, DL, data science, and AI system implementations.</p>
+<a href="https://github.com/waseemalmazrua" target="_blank">View GitHub →</a>
+</div>
+
+<div class="project">
+<h3>Professional Portfolio</h3>
+<p>Healthcare analytics & real-world data science projects.</p>
+<a href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/"
+target="_blank">View Portfolio →</a>
+</div>
+
+<div class="project">
+<h3>LinkedIn</h3>
+<p>Certifications, experience, and professional updates.</p>
+<a href="https://www.linkedin.com/in/waseemalmazrua/" target="_blank">Connect →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="cv">
+<div class="container">
+<h2 class="section-title">Curriculum Vitae</h2>
+<div class="card" style="text-align:center">
+<p>View or download my full professional CV.</p>
+<br/>
+<div class="hero-buttons">
+<a href="assets/cv/Waseem_Almazrua_CV_2026.pdf" target="_blank" class="btn btn-primary">
+<i class="fas fa-eye"></i> View CV
+</a>
+<a href="assets/cv/Waseem_Almazrua_CV_2026.pdf" download class="btn btn-secondary">
+<i class="fas fa-download"></i> Download CV
+</a>
+</div>
+</div>
+</div>
 </section>
 
 <section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="card" style="text-align:center">
-            <p>Open to Data Scientist, Machine Learning, and AI-focused roles.</p>
-            <p>Email: <a href="mailto:waseeme900@gmail.com">waseeme900@gmail.com</a></p>
-            <p>Location: Riyadh, Saudi Arabia</p>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<div class="card">
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-envelope"></i></div>
+<p><a href="mailto:waseeme900@gmail.com">waseeme900@gmail.com</a></p>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-phone"></i></div>
+<p>+966 55 505 6252</p>
+</div>
+<div class="contact-item">
+<div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+<p>Riyadh, Saudi Arabia</p>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Waseem Almazrua</p>
+<p>© 2026 Waseem Almazrua · Data Science & ML Systems</p>
 </footer>
 
 </body>

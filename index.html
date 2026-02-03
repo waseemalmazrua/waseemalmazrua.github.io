@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Waseem Almazrua - Data Scientist specializing in Healthcare Analytics">
-    <title>Waseem Almazrua | Data Scientist</title>
+    <meta name="description" content="Waseem Almazrua - Data Scientist specializing in Machine Learning, AI systems, and Healthcare Analytics">
+    <title>Waseem Almazrua | Data Scientist & ML Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -25,7 +26,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background: var(--bg-light);
@@ -33,17 +34,16 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         nav {
@@ -59,27 +59,20 @@
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .nav-links {
+            list-style: none;
             display: flex;
             gap: 2rem;
-            list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
         .hero {
             background: var(--gradient);
             color: var(--white);
@@ -89,40 +82,34 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            font-weight: 700;
             margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease;
         }
 
         .hero h2 {
             font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: 1.5rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s both;
         }
 
         .hero p {
+            max-width: 750px;
+            margin: auto;
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.4s both;
+            opacity: 0.95;
         }
 
         .hero-buttons {
+            margin-top: 2rem;
             display: flex;
-            gap: 1rem;
             justify-content: center;
-            animation: fadeInUp 0.8s ease 0.6s both;
+            gap: 1rem;
         }
 
         .btn {
-            padding: 0.875rem 2rem;
+            padding: 0.9rem 2rem;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -133,23 +120,11 @@
             color: var(--primary-color);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
         .btn-secondary {
-            background: transparent;
-            color: var(--white);
             border: 2px solid var(--white);
+            color: var(--white);
         }
 
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-
-        /* Sections */
         section {
             padding: 5rem 0;
         }
@@ -157,460 +132,196 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            font-weight: 700;
             margin-bottom: 3rem;
-            position: relative;
         }
 
         .section-title::after {
-            content: '';
-            display: block;
+            content: "";
             width: 60px;
             height: 4px;
             background: var(--gradient);
-            margin: 1rem auto 0;
+            display: block;
+            margin: 1rem auto;
             border-radius: 2px;
         }
 
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .card {
             background: var(--white);
             padding: 3rem;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+            max-width: 900px;
+            margin: auto;
         }
 
-        .about-content p {
-            font-size: 1.125rem;
+        .card p {
             color: var(--text-light);
-            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Skills Section */
-        .skills-grid {
+        .skills-grid, .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
         }
 
-        .skill-card {
+        .skill-card, .project-card {
             background: var(--white);
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .skill-icon {
+        .skill-card i {
             font-size: 3rem;
+            margin-bottom: 1rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
         }
 
         .project-card p {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
         }
 
         .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: inline-block;
+            margin-top: 1rem;
             color: var(--primary-color);
-            text-decoration: none;
             font-weight: 600;
-            transition: gap 0.3s;
-        }
-
-        .project-link:hover {
-            gap: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.25rem;
-        }
-
-        .contact-details h4 {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-details p {
-            font-size: 1rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .contact-details a {
-            color: var(--text-dark);
             text-decoration: none;
         }
 
-        .contact-details a:hover {
-            color: var(--primary-color);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--bg-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            font-size: 1.25rem;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-link:hover {
-            background: var(--gradient);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
         footer {
             background: var(--text-dark);
             color: var(--white);
             text-align: center;
             padding: 2rem 0;
+            margin-top: 3rem;
         }
 
-        footer p {
-            opacity: 0.8;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
-
             .hero h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
             .hero-buttons {
                 flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-
-            .about-content,
-            .contact-content {
-                padding: 2rem 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">WA</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Waseem Almazrua</h1>
-            <h2>Data Scientist | Healthcare Analytics</h2>
-            <p>Transforming healthcare data into actionable insights through advanced analytics and machine learning</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
-                </a>
-                <a href="https://github.com/waseemalmazrua" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i>
-                    View GitHub
-                </a>
-            </div>
-        </div>
-    </section>
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">WA</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+<section class="hero">
+    <div class="container">
+        <h1>Waseem Almazrua</h1>
+        <h2>Data Scientist | Machine Learning & AI Systems</h2>
+        <p>
+            Building end-to-end data science and machine learning systems — from data analysis and modeling
+            to deployment — with a strong focus on healthcare applications.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get In Touch</a>
+            <a href="https://github.com/waseemalmazrua" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>
+                I am a Data Scientist with a strong background in healthcare and clinical environments.
+                I transitioned professionally into data science, focusing on data analysis, statistics,
+                and machine learning to build data-driven solutions that support decision-making,
+                quality improvement, and operational efficiency.
+            </p>
+            <p>
+                I work across the full machine learning lifecycle, including data preprocessing,
+                feature engineering, model training, evaluation, and deployment.
+                I have hands-on experience building APIs with FastAPI, integrating models with databases,
+                and designing reproducible ML workflows suitable for production environments.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-python"></i><h3>Python</h3><p>Data analysis, ML, automation</p></div>
+            <div class="skill-card"><i class="fas fa-database"></i><h3>SQL</h3><p>Querying & data modeling</p></div>
+            <div class="skill-card"><i class="fas fa-chart-line"></i><h3>Data Science</h3><p>EDA, statistics, visualization</p></div>
+            <div class="skill-card"><i class="fas fa-brain"></i><h3>Machine Learning</h3><p>Supervised & unsupervised models</p></div>
+            <div class="skill-card"><i class="fas fa-network-wired"></i><h3>Deep Learning</h3><p>CNNs, PyTorch, TensorFlow</p></div>
+            <div class="skill-card"><i class="fas fa-cogs"></i><h3>ML Systems</h3><p>FastAPI, Docker, MLflow, Git</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Healthcare Readmission Prediction</h3>
                 <p>
-                    I am a Data Scientist with a strong background in healthcare and clinical environments. I transitioned professionally into data science, focusing on data analysis, statistics, and machine learning to build data-driven solutions that support decision-making, quality improvement, and operational efficiency—especially within healthcare systems.
+                    Built a machine learning system to predict hospital readmissions using clinical data.
+                    Covered preprocessing, modeling, evaluation, and deployment via FastAPI.
                 </p>
-                <p style="margin-top: 1.5rem;">
-                    My expertise lies in leveraging Python, SQL, and advanced statistical methods to extract meaningful insights from complex healthcare data, enabling evidence-based strategies that enhance patient outcomes and organizational performance.
-                </p>
+                <a class="project-link" href="https://github.com/waseemalmazrua" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Professional Portfolio</h3>
+                <p>Collection of healthcare analytics and data science projects.</p>
+                <a class="project-link" href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/" target="_blank">
+                    View Portfolio →
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills" style="background: var(--white);">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <p style="color: var(--text-light);">Data analysis, machine learning, and automation</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>SQL</h3>
-                    <p style="color: var(--text-light);">Database querying and data manipulation</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Analysis</h3>
-                    <p style="color: var(--text-light);">Statistical analysis and data visualization</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Statistics</h3>
-                    <p style="color: var(--text-light);">Hypothesis testing and predictive modeling</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning</h3>
-                    <p style="color: var(--text-light);">Supervised and unsupervised learning</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare Analytics</h3>
-                    <p style="color: var(--text-light);">Clinical data analysis and quality improvement</p>
-                </div>
-            </div>
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="card" style="text-align:center">
+            <p>Open to Data Scientist, Machine Learning, and AI-focused roles.</p>
+            <p>Email: <a href="mailto:waseeme900@gmail.com">waseeme900@gmail.com</a></p>
+            <p>Location: Riyadh, Saudi Arabia</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects & Portfolio</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>GitHub Repositories</h3>
-                        <p>Explore my open-source projects, code samples, and data science implementations showcasing practical applications of machine learning and analytics.</p>
-                        <a href="https://github.com/waseemalmazrua" target="_blank" class="project-link">
-                            View on GitHub
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Professional Portfolio</h3>
-                        <p>Comprehensive portfolio showcasing healthcare data analytics projects, statistical analyses, and data-driven insights for clinical decision support.</p>
-                        <a href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/" target="_blank" class="project-link">
-                            View Portfolio
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>LinkedIn Profile</h3>
-                        <p>Connect with me professionally to learn more about my experience, certifications, and contributions to the data science community.</p>
-                        <a href="https://www.linkedin.com/in/waseemalmazrua/" target="_blank" class="project-link">
-                            Connect on LinkedIn
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+    <p>&copy; 2026 Waseem Almazrua</p>
+</footer>
 
-    <!-- Contact Section -->
-    <section id="contact" style="background: var(--white);">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p><a href="mailto:waseeme900@gmail.com">waseeme900@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+966555056252">0555056252</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Riyadh, Saudi Arabia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/waseemalmazrua" target="_blank" class="social-link" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/waseemalmazrua/" target="_blank" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/" target="_blank" class="social-link" title="Portfolio">
-                        <i class="fas fa-briefcase"></i>
-                    </a>
-                    <a href="mailto:waseeme900@gmail.com" class="social-link" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Waseem Almazrua. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>

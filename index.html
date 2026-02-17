@@ -140,7 +140,8 @@
     .skill-icon {
       font-size: 2.5rem; background: var(--gradient-primary);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      margin-bottom: 1rem; transition: transform 0.3s; display: block;
+      margin-bottom: 1rem; transition: transform 0.3s;
+      display: flex; align-items: center; justify-content: center;
     }
     .skill-card:hover .skill-icon { transform: scale(1.1) rotate(5deg); }
     .skill-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-dark); font-weight: 700; }
@@ -368,32 +369,32 @@
       <p class="section-subtitle">Comprehensive expertise across the data science stack</p>
       <div class="skills-grid">
         <div class="skill-card">
-          <i class="fab fa-python skill-icon"></i>
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
           <h3>Python</h3>
           <p>Data analysis, ML, automation</p>
         </div>
         <div class="skill-card">
-          <i class="fas fa-database skill-icon"></i>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
           <h3>SQL</h3>
           <p>Querying & data modeling</p>
         </div>
         <div class="skill-card">
-          <i class="fas fa-chart-line skill-icon"></i>
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Data Science</h3>
           <p>EDA, statistics, visualization</p>
         </div>
         <div class="skill-card">
-          <i class="fas fa-brain skill-icon"></i>
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
           <h3>Machine Learning</h3>
           <p>Supervised & unsupervised models</p>
         </div>
         <div class="skill-card">
-          <i class="fas fa-project-diagram skill-icon"></i>
+          <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
           <h3>Deep Learning</h3>
           <p>CNNs, PyTorch</p>
         </div>
         <div class="skill-card">
-          <i class="fas fa-cogs skill-icon"></i>
+          <div class="skill-icon"><i class="fas fa-cogs"></i></div>
           <h3>ML Systems</h3>
           <p>FastAPI, Docker, MLflow, Linux, Git, Cloud</p>
         </div>
@@ -422,22 +423,6 @@
               <p>Explore my open-source projects, code samples, and data science implementations showcasing practical applications of machine learning and analytics.</p>
               <a href="https://github.com/waseemalmazrua" target="_blank" class="portfolio-link">
                 View Repositories <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Professional Portfolio -->
-          <div class="portfolio-card">
-            <div class="portfolio-card-bar bar-work"></div>
-            <div class="portfolio-card-body">
-              <div class="portfolio-platform">
-                <span class="platform-dot dot-work"></span>
-                <span class="platform-name">Portfolio</span>
-              </div>
-              <h3>Professional Portfolio</h3>
-              <p>Comprehensive portfolio showcasing healthcare data analytics projects, statistical analyses, and data-driven insights for clinical decision support.</p>
-              <a href="https://aviztra.com/portfolio/waseem-almazrua-healthcare-data-statistical-analyst/" target="_blank" class="portfolio-link">
-                View Portfolio <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
